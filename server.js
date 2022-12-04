@@ -36,6 +36,13 @@ app.get("/api/v1/:appId", (req, res) => {
     const {appId} = req.params
     console.log("▶ ➡ file: server.js:37 ➡ app.get ➡ appId", appId);
 })
+app.get("/api/v1/:appId/reviewes/:reviewId", (req, res) => {
+    res.send('this is an api with two params')
+    console.log(req.params)
+    const {appId,reviewId} = req.params
+    console.log("▶ ➡ file: server.js:43 ➡ app.get ➡ reviewId", reviewId);
+    console.log("▶ ➡ file: server.js:37 ➡ app.get ➡ appId", appId);
+})
 
 // server
 const port = process.env.PORT || 8000;
