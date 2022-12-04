@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const helmet = require('helmet');
+const {products} =require('./data')
+console.log("▶ ➡ file: server.js:5 ➡ products", products);
 // const mongoose = require("mongoose");
 require("dotenv").config();
 const morgan = require("morgan");
