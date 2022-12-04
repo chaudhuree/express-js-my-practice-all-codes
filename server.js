@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const helmet = require('helmet');
 const {products} =require('./data')
-console.log("▶ ➡ file: server.js:5 ➡ products", products);
+// console.log("▶ ➡ file: server.js:5 ➡ products", products);
 // const mongoose = require("mongoose");
 require("dotenv").config();
 const morgan = require("morgan");
 const cors = require('cors');
-const { readdirSync } = require("fs")
+// const { readdirSync } = require("fs")
 
 
 // middlewares
@@ -45,6 +45,7 @@ app.get("/api/v1/:appId/reviewes/:reviewId", (req, res) => {
     console.log("▶ ➡ file: server.js:43 ➡ app.get ➡ reviewId", reviewId);
     console.log("▶ ➡ file: server.js:37 ➡ app.get ➡ appId", appId);
 })
+
 
 // server
 const port = process.env.PORT || 8000;
