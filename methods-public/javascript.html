@@ -48,13 +48,12 @@
 
       const fetchPeople = async () => {
         try {
-          const { data } = await axios.get("http://localhost:5000/api/people");
-          if (data.status === "success") {
-            const people = data.data.map((person) => {
-              return `<h5>${person.name}</h5>`;
-            });
-            result.innerHTML = people.join("");
-          }
+          const { data } = await axios.get("/api/people");
+
+          const people = data.data.map((person) => {
+            return `<h5>${person.name}</h5>`;
+          });
+          result.innerHTML = people.join("");
         } catch (error) {
           result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`;
         }
