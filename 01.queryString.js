@@ -24,6 +24,7 @@ app.get("/api/v1/query", (req, res) => {
 
 })
 // query with functionality
+// localhost:8000/api/v1/products/search=a&limit-2
 app.get("/api/v1/products", (req, res) => {
   const { search, limit } = req.query
   console.log("▶ ➡ file: queryString.js:29 ➡ app.get ➡ limit", limit);
