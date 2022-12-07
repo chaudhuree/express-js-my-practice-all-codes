@@ -1,8 +1,10 @@
-exports.greetings=async(req,res)=>{
-    res.send(`<h1>Hello </h1>`)
-}
+const loginAuth=(req,res) => {
+    const { name } = req.body
+  if (name) {
+    return res.status(200).send(`Welcome ${name}`)
+  }
 
+  res.status(401).send('Please Provide Credentials')
 
-exports.overview=async(req,res)=>{
-    res.json({status:"success",message:"We love express"})
 }
+module.exports =loginAuth
